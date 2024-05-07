@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bahrain Government Jobs App</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f4f7fa;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+    header {
+        background-color: #005691;
+        color: #fff;
+        text-align: center;
+        padding: 40px 0;
+        animation: fadeInDown 1s ease-out; /* Header animation */
+    }
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .logo {
+        float: left;
+        margin-right: 20px;
+    }
+    h1 {
+        font-size: 2.5em; /* Increase font size for emphasis */
+        margin-top: 20px; /* Add margin at the top for spacing */
+        line-height: 1.2; /* Improve line spacing */
+        display: inline-block; /* Ensure h1 stays inline with the logo */
+        animation: slideInLeft 1s ease-out; /* H1 animation */
+    }
+    @keyframes slideInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    .header-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 40px;
+        animation: zoomIn 1s ease-out; /* Image animation */
+    }
+    @keyframes zoomIn {
+        from {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    .cta-button {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 15px 60px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 40px;
+        box-shadow: 0 2px 5px rgba(76, 175, 80, 0.3);
+        animation: pulse 1s infinite alternate; /* Button animation */
+    }
+    @keyframes pulse {
+        to {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+        }
+    }
+    main {
+        text-align: center;
+        padding: 40px 20px;
+    }
+    footer {
+        background-color: #005691;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    footer p {
+        margin: 0;
+    }
+</style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Bahrain Government Logo" width="80">
+        </div>
+        <h1>Bahrain Government Jobs App</h1>
+    </div>
+</header>
+
+<main class="container">
+    <img src="./img1.png" alt="Header Image" class="header-image">
+    <a href="BahrainGovJobsApp.apk" class="cta-button">Download App</a>
+    <p>Explore exciting career opportunities in Bahrain's public sector with our official Government Jobs App. Get instant access to job listings, updates, and notifications right on your mobile device. Join us in contributing to the growth and development of Bahrain!</p>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Bahrain Government</p>
+    </div>
+</footer>
+
+</body>
+</html>
