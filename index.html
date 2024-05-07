@@ -15,8 +15,8 @@
         line-height: 1.6;
     }
     header {
-        background-color: white;
-        color: #005691;
+        background-color: #005691;
+        color: #fff;
         text-align: center;
         padding: 40px 0;
         position: relative;
@@ -37,6 +37,8 @@
     .logo {
         width: 80px;
         height: auto;
+        border-radius: 50%; /* Apply border radius for circular shape */
+        border: 2px solid #fff; /* Add border to make the logo stand out */
     }
     .header-content {
         text-align: center;
@@ -45,28 +47,32 @@
         z-index: 1;
     }
     h1 {
-        font-size: 2.5em;
+        font-size: 3em; /* Increase font size for the title */
         margin-top: 20px;
         line-height: 1.2;
     }
     .header-image {
         width: 100%;
         height: auto;
-        opacity: 0.8;
-        transition: transform 0.5s ease; /* Add transition for smooth animation */
+        border-radius: 10px; /* Apply border radius for rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
     }
     .cta-button {
         background-color: #4CAF50;
         color: #fff;
-        padding: 15px 60px;
-        font-size: 18px;
+        padding: 15px 40px;
+        font-size: 1.2em;
         border: none;
-        border-radius: 5px;
+        border-radius: 25px; /* Apply rounded corners to button */
         cursor: pointer;
         text-decoration: none;
         display: inline-block;
         margin-top: 40px;
-        box-shadow: 0 2px 5px rgba(76, 175, 80, 0.3);
+        box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+        transition: transform 0.2s ease; /* Add button hover effect */
+    }
+    .cta-button:hover {
+        transform: translateY(-3px); /* Move button up on hover */
     }
     main {
         text-align: center;
@@ -94,26 +100,11 @@
             margin-top: 60px; /* Adjust top margin for smaller screens */
         }
         h1 {
-            font-size: 2em; /* Decrease font size for smaller screens */
+            font-size: 2.5em; /* Decrease font size for smaller screens */
         }
-    }
-    /* Job List Styling */
-    .job-list {
-        text-align: left;
-        margin-top: 40px;
-    }
-    .job-item {
-        margin-bottom: 20px;
-        padding: 10px;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    .job-name {
-        font-weight: bold;
-    }
-    .job-deadline {
-        color: #888;
+        .cta-button {
+            padding: 12px 30px; /* Adjust button padding for smaller screens */
+        }
     }
 </style>
 </head>
@@ -125,38 +116,14 @@
         </div>
         <div class="header-content">
             <h1>Bahrain Government Jobs</h1>
-            <img src="./WhatsApp Image 2024-05-07 at 10.40.39 AM (1).jpeg" alt="Header Image" class="header-image" id="slider">
+            <img src="./WhatsApp Image 2024-05-07 at 10.40.39 AM (1).jpeg" alt="Header Image" class="header-image">
         </div>
     </div>
 </header>
 
 <main class="container">
-    <a href="BahrainGovJobsApp.apk" class="cta-button">Download</a>
+    <a href="BahrainGovJobsApp.apk" class="cta-button">Download Now</a>
     <p>Explore exciting career opportunities in Bahrain's public sector with our official Government Jobs App. Get instant access to job listings, updates, and notifications right on your mobile device. Join us in contributing to the growth and development of Bahrain!</p>
-    
-    <!-- Job List -->
-    <!-- <div class="job-list">
-        <div class="job-item">
-            <div class="job-name">Software Engineer</div>
-            <div class="job-deadline">Deadline: June 30, 2024</div>
-        </div>
-        <div class="job-item">
-            <div class="job-name">Data Analyst</div>
-            <div class="job-deadline">Deadline: July 15, 2024</div>
-        </div>
-        <div class="job-item">
-            <div class="job-name">Project Manager</div>
-            <div class="job-deadline">Deadline: July 25, 2024</div>
-        </div>
-        <div class="job-item">
-            <div class="job-name">Graphic Designer</div>
-            <div class="job-deadline">Deadline: August 10, 2024</div>
-        </div>
-        <div class="job-item">
-            <div class="job-name">Financial Analyst</div>
-            <div class="job-deadline">Deadline: August 20, 2024</div>
-        </div>
-    </div> -->
 </main>
 
 <footer>
@@ -164,24 +131,6 @@
         <p>&copy; 2024 Bahrain Government</p>
     </div>
 </footer>
-
-<script>
-    // Image Slider
-    const images = ['./WhatsApp Image 2024-05-07 at 10.40.39 AM (1).jpeg', './slider2.jpeg']; // Add paths to your images
-    let currentIndex = 0;
-    const slider = document.getElementById('slider');
-
-    function changeImage() {
-        slider.style.transform = 'translateY(-10px)'; // Move the slider up slightly
-        setTimeout(() => {
-            slider.src = images[currentIndex];
-            slider.style.transform = 'translateY(0)'; // Reset the transform after changing image
-            currentIndex = (currentIndex + 1) % images.length;
-        }, 500); // Delay before changing image (0.5 seconds)
-    }
-
-    setInterval(changeImage, 2000); // Change image every 2 seconds (2000 milliseconds)
-</script>
 
 </body>
 </html>
