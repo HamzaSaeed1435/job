@@ -15,65 +15,45 @@
         line-height: 1.6;
     }
     header {
-        background-color: #005691;
-        color: #fff;
+        background-color: white;
+        color: #005691;
         text-align: center;
         padding: 40px 0;
-        animation: fadeInDown 1s ease-out; /* Header animation */
-    }
-    @keyframes fadeInDown {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        position: relative;
+        overflow: hidden;
     }
     .container {
         width: 90%;
+        max-width: 1200px; /* Limit container width for responsiveness */
         margin: 0 auto;
-        overflow: hidden;
+        position: relative;
+    }
+    .logo-container {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
     }
     .logo {
-        float: left;
-        margin-right: 20px;
+        width: 80px;
+        height: auto;
+    }
+    .header-content {
+        text-align: center;
+        margin-top: 80px; /* Adjust top margin for header content */
+        position: relative;
+        z-index: 1;
     }
     h1 {
-        font-size: 2.5em; /* Increase font size for emphasis */
-        margin-top: 20px; /* Add margin at the top for spacing */
-        line-height: 1.2; /* Improve line spacing */
-        display: inline-block; /* Ensure h1 stays inline with the logo */
-        animation: slideInLeft 1s ease-out; /* H1 animation */
-    }
-    @keyframes slideInLeft {
-        from {
-            opacity: 0;
-            transform: translateX(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
+        font-size: 2.5em;
+        margin-top: 20px;
+        line-height: 1.2;
     }
     .header-image {
-        max-width: 100%;
+        width: 100%;
         height: auto;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-top: 40px;
-        animation: zoomIn 1s ease-out; /* Image animation */
-    }
-    @keyframes zoomIn {
-        from {
-            opacity: 0;
-            transform: scale(0.8);
-        }
-        to {
-            opacity: 1;
-            transform: scale(1);
-        }
+        opacity: 0.8;
+        transition: transform 0.5s ease; /* Add transition for smooth animation */
     }
     .cta-button {
         background-color: #4CAF50;
@@ -87,13 +67,6 @@
         display: inline-block;
         margin-top: 40px;
         box-shadow: 0 2px 5px rgba(76, 175, 80, 0.3);
-        animation: pulse 1s infinite alternate; /* Button animation */
-    }
-    @keyframes pulse {
-        to {
-            transform: scale(1.1);
-            box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
-        }
     }
     main {
         text-align: center;
@@ -108,22 +81,82 @@
     footer p {
         margin: 0;
     }
+    /* Media Query for Responsive Layout */
+    @media (max-width: 768px) {
+        .logo-container {
+            position: relative;
+            top: auto;
+            left: auto;
+            margin-bottom: 20px; /* Add margin below the logo for smaller screens */
+            text-align: left;
+        }
+        .header-content {
+            margin-top: 60px; /* Adjust top margin for smaller screens */
+        }
+        h1 {
+            font-size: 2em; /* Decrease font size for smaller screens */
+        }
+    }
+    /* Job List Styling */
+    .job-list {
+        text-align: left;
+        margin-top: 40px;
+    }
+    .job-item {
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .job-name {
+        font-weight: bold;
+    }
+    .job-deadline {
+        color: #888;
+    }
 </style>
 </head>
 <body>
 <header>
     <div class="container">
-        <div class="logo">
-            <img src="logo.png" alt="Bahrain Government Logo" width="80">
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="Bahrain Government Logo" class="logo">
         </div>
-        <h1>Bahrain Government Jobs App</h1>
+        <div class="header-content">
+            <h1>Bahrain Government Jobs App</h1>
+            <img src="./WhatsApp Image 2024-05-07 at 10.40.39 AM (1).jpeg" alt="Header Image" class="header-image" id="slider">
+        </div>
     </div>
 </header>
 
 <main class="container">
-    <img src="./img1.png" alt="Header Image" class="header-image">
     <a href="BahrainGovJobsApp.apk" class="cta-button">Download App</a>
     <p>Explore exciting career opportunities in Bahrain's public sector with our official Government Jobs App. Get instant access to job listings, updates, and notifications right on your mobile device. Join us in contributing to the growth and development of Bahrain!</p>
+    
+    <!-- Job List -->
+    <div class="job-list">
+        <div class="job-item">
+            <div class="job-name">Software Engineer</div>
+            <div class="job-deadline">Deadline: June 30, 2024</div>
+        </div>
+        <div class="job-item">
+            <div class="job-name">Data Analyst</div>
+            <div class="job-deadline">Deadline: July 15, 2024</div>
+        </div>
+        <div class="job-item">
+            <div class="job-name">Project Manager</div>
+            <div class="job-deadline">Deadline: July 25, 2024</div>
+        </div>
+        <div class="job-item">
+            <div class="job-name">Graphic Designer</div>
+            <div class="job-deadline">Deadline: August 10, 2024</div>
+        </div>
+        <div class="job-item">
+            <div class="job-name">Financial Analyst</div>
+            <div class="job-deadline">Deadline: August 20, 2024</div>
+        </div>
+    </div>
 </main>
 
 <footer>
@@ -131,6 +164,24 @@
         <p>&copy; 2024 Bahrain Government</p>
     </div>
 </footer>
+
+<script>
+    // Image Slider
+    const images = ['./WhatsApp Image 2024-05-07 at 10.40.39 AM (1).jpeg', './slider2.jpeg']; // Add paths to your images
+    let currentIndex = 0;
+    const slider = document.getElementById('slider');
+
+    function changeImage() {
+        slider.style.transform = 'translateY(-10px)'; // Move the slider up slightly
+        setTimeout(() => {
+            slider.src = images[currentIndex];
+            slider.style.transform = 'translateY(0)'; // Reset the transform after changing image
+            currentIndex = (currentIndex + 1) % images.length;
+        }, 500); // Delay before changing image (0.5 seconds)
+    }
+
+    setInterval(changeImage, 2000); // Change image every 2 seconds (2000 milliseconds)
+</script>
 
 </body>
 </html>
